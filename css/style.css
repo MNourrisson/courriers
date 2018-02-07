@@ -1,0 +1,213 @@
+@font-face{font-family:'abeezee'; src:url('font/ABeeZee-Regular.ttf') format('truetype');} 
+
+*, html{font-size:16px;}
+body{background:url("logo.svg") no-repeat fixed right bottom / 193px 213px #fdfdfd;font-family:'abeezee',arial,sans-serif;}
+
+*, *::before, *::after {box-sizing: border-box;}
+.clear, br{clear:both;}
+.erreurtab input{background:rgba(255,0,0,0.10); border-color:red;}
+.erreur{color:#ff0000;}
+.msgok{color:#06c306;}
+.left,.ui-tabs .ui-tabs-nav li,.ui-tabs .ui-tabs-nav .ui-tabs-anchor{	float:left;}
+a{
+	color:#0387A5;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out 0s, border-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+}
+
+header{
+	-webkit-box-shadow: 0px 3px 7px -2px rgba(28,26,28,1);
+	-moz-box-shadow: 0px 3px 7px -2px rgba(28,26,28,1);
+	box-shadow: 0px 3px 7px -2px rgba(28,26,28,1);
+	background-color:#024772;
+}
+header div.header{height:55px;margin:0 auto;}
+
+header div.header h1{
+	font-size:1.25em;
+	padding:0.8em 0;
+	text-align:center;
+}
+header div.header h1 a{color:#fff;}
+
+header span.connect {background-color:#eef02d;padding:20px; position:absolute;}
+div#monsvg{width:80px;}
+
+
+nav > ul > li{float:left; margin-bottom:35px;text-align:center;width:48%;}
+nav > ul > li:first-child{margin-right:1%;}
+
+nav > ul > li.currentli {position:relative;}
+
+nav > ul > li span {
+	background-color:#024772;
+	display:block;
+	font-size:16px;
+	padding:5px 0;
+	z-index:50;
+}
+nav > ul > li.currentli span {background-color:#d71635;}
+
+#nav{
+	color:#fff;
+	margin:13px auto 10px;
+	padding-right:10px;
+    position: relative;
+	width:650px;
+}
+#nav ul{
+	width:100%;
+}
+/*
+#nav::after {
+    content: "";
+    display: block;
+    height: 0.75em;
+    width: 100%;
+}*/
+#nav > ul > li.currentli span::before {
+    background-color: #d71635;
+    content: "";
+    display: block;
+    height: 0.75em;
+    left: 50%;
+    margin-left: -0.375em;
+    position: absolute;
+	top: 1.2em;
+    transform: rotateZ(45deg);
+    width: 0.75em;
+	z-index:5;
+}
+nav > ul ul li a{
+	border-bottom:1px solid #BFB6AE;
+	display:inline-block;
+	margin:10px 0 0;
+	padding:0px 0 10px;
+	width:80%;
+}
+
+nav > ul ul li a:hover{color:#28e30f;}
+nav > ul li ul li.current a{color:#fd7f19;}
+#content{
+	background-color:#fff;
+	-webkit-box-shadow: 0px 0px 8px 0px rgba(163,155,163,1);
+	-moz-box-shadow: 0px 0px 8px 0px rgba(163,155,163,1);
+	box-shadow: 0px 0px 8px 0px rgba(163,155,163,1);
+	clear:both;
+	margin:0 auto;
+	padding:20px;
+	/*width:95%;*/
+}
+
+#content form {margin-bottom:10px;}
+#content form label{
+	display:block;
+	float:left;
+	font-size:14px;
+	margin:5px;
+	/*padding-right:10px;*/
+	width:15%;
+}
+#content form input, #content form select,#content form textarea{
+	float:left;
+	font-size:14px;
+	margin:5px;
+	width:15%;
+}
+/*#content form input#objet{width:450px;}*/
+#content form textarea{width:60%;}
+#content input[type="submit"]{width:100px;}
+input[readonly="readonly"]{background:#eee;}
+#content h2{
+	color:#f39200;
+	font-size:1.2em;
+	margin:0.8em 0 1.2em 0;
+	text-align:center;
+}
+p.indication, p.resultat{
+	color:#00734a;
+	font-size:1em;
+	margin-bottom:16px;
+}
+span.obligatoire{color:#00734a;}
+p.erreur, p.resultat, p.msgok{margin-top:7px;}
+section > p.erreur,section > p.msgok{margin-bottom:16px;}
+ul.liste_res,ul.alerte{
+	list-style:square inside none;
+	margin-left:10px;
+}
+ul.liste_res li{
+	color: #37c0fb;
+	line-height:1.5em;
+}
+ul.liste_res li a{color: #37c0fb;}
+ul.liste_res li a:hover{text-decoration:underline;}
+#content form ul li.classdate label,#content form ul li.classdate input,#content form ul li.classcompetence label,#content form ul li.classcompetence input{width:7%;}
+#content form ul li.classnb label,#content form ul li.classnb input{width:3%;}
+#content form ul li input.objetcourrier{width:42%;}
+#content form ul li.objet label,#content form ul li.objet input{width:50%;}
+#content form ul li.redaccourrier input,#content form li.redaccourrier label{width:10%;}
+#content form li.terbis label{width:6%;}
+#content form li.terbis span{width:40px;display:block;}
+#content form ul li.terbis input{margin:0 0 2px 0;width:3%;}
+#content form ul li.terbis span label{margin-top:0px; width:5%;}
+#content form ul li[id*="element"] li.terbis{float:left; width:6%;}
+#content form ul li.exped label, #content form ul li.exped input{width:28%;}
+#content form input#exp,#content form input#contenu,#content form input#dest,#content form input#objet{width:35%;}
+ .ui-autocomplete {
+    max-height: 300px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+}
+/* IE 6 doesn't support max-height
+* we use height instead, but this forces the menu to always be this tall
+*/
+* html .ui-autocomplete {height: 300px;}
+p.retour{font-size:0.9em;margin:5px 0 10px 0;	}
+p.retour a:hover{text-decoration:underline;}
+div#tableau{
+	font-size:0.9em;
+	text-align:center;
+	min-width:975px;
+	max-width:975px;
+}
+div#tableau.depart{
+	min-width:1021px;
+	max-width:1021px;
+}
+div#tableau thead{
+    border-color: inherit;
+	display:block;
+	margin-right:15px;
+    vertical-align: middle;
+	min-width:955px;
+	max-width:955px;
+}
+div#tableau.depart thead{
+	min-width:1004px;
+	max-width:1004px;
+}
+
+div#tableau table > tbody{
+	display:block;
+	max-height:700px;
+	overflow-y:auto;
+}
+div#tableau table tr{line-height:20px;display:block;}
+div#tableau table tr td,div#tableau table tr th{border:1px solid #eee;vertical-align:middle;	}
+
+div#tableau.depart table .dateligne,div#tableau table .redac,div#tableau table .comp{font-size:11px;}
+div#tableau table .idformate{width:106px;}
+div#tableau table .dateligne{width:71px;}
+div#tableau table .comp{width:71px;}
+div#tableau table .desti{width:234px;}
+div#tableau table .redac{width:93px;}
+div#tableau table .nombre{width:26px;}
+div#tableau table .obj, div#tableau table .links{font-size:0.9em;width:210px;}
+tr.identique{background-color:none;}
+tr.differente{background-color:#b8f0a2;}
+
+form.formulairesupp{display:inline-flex;}
+
+#content form input.boutonsuppr{width:24px;height:24px;}
